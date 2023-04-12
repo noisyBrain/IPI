@@ -17,7 +17,7 @@ while SHOULD_CONTINUE:
 
     IS_ODD = True
     for i in range(2, odd_number):
-        if odd_number % 2 == 0:
+        if odd_number % i == 0:
             IS_ODD = False
             break
 
