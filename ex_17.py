@@ -8,7 +8,7 @@ Nota: cada palabra estará separada por un espacio en blanco
 cadena).
 '''
 
-str_input = input('Ingresá un texto para analizar: ')
+str_input = input('Ingresá un texto para analizar: ').strip()
 separated_words = str_input.split()
 words_in_input = len(separated_words)
 
