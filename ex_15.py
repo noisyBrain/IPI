@@ -11,9 +11,8 @@ while SHOULD_CONTINUE:
     odd_number = int(input('Ingresá un número mayor a 1: '))
 
     if odd_number == 1:
-        SHOULD_CONTINUE = False
         print('Cerrando...')
-        continue
+        break
 
     IS_ODD = True
     for i in range(2, odd_number):

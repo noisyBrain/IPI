@@ -14,9 +14,8 @@ while SHOULD_CONTINUE:
     aux_to_analize = int_number
 
     if aux_to_analize == -1:
-        SHOULD_CONTINUE = False
         print('Cerrando...')
-        continue
+        break
 
     while aux_to_analize > 0:
 

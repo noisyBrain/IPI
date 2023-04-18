@@ -16,8 +16,7 @@ while SHOULD_CONTINUE:
 
     if int_number == 0:
         print('Cerrando...')
-        SHOULD_CONTINUE = False
-        continue
+        break
 
     IS_ODD = True
     for num in range(2, int_number):

@@ -28,8 +28,7 @@ while SHOULD_CONTINUE:
     should_not_continue = len(str_input) > 1 or is_string_number(str_input)
 
     if should_not_continue:
-        SHOULD_CONTINUE = False
-        continue
+        break
 
     OUTPUT += str_input
 

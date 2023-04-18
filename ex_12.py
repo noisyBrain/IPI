@@ -11,7 +11,6 @@ while SHOULD_CONTINUE:
     new_incoming = int(input('Ingresá un monto: '))
 
     if new_incoming == 0:
-        SHOULD_CONTINUE = False
         print(f'Lo que ganaste esta semana fue: {SELLS}')
         break
 
