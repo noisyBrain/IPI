@@ -30,3 +30,17 @@ def max_number(number1, number2):
         return number1
 
     return number2
+
+def user(name):
+    username = ''
+
+    for letter in name.lower():
+        if letter == " " or letter == ",":
+            continue
+        else:
+            username += letter
+
+    return username
+
+def default_password(dni):
+    return dni % 10000
