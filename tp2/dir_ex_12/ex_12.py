@@ -7,15 +7,18 @@ La lectura de la información finaliza al leer un monto igual a cero
 SHOULD_CONTINUE = True
 SELLS = 0
 
-while SHOULD_CONTINUE:
-    new_incoming = int(input('Ingresá un monto: '))
+suma_monto = 0
+monto = int(input("ingrese el monto de venta, ingrese 0 para finalizar"))
 
-    if new_incoming == 0:
-        print(f'Lo que ganaste esta semana fue: {SELLS}')
-        break
+while monto != 0:
 
-    if new_incoming < 0:
-        print('El monto ingresado no puede ser negativo!')
+    if monto < 0:
+        print("ingreso un valor negativo")
+        monto = int(input("ingrese el monto de venta, ingrese 0 para finalizar"))
         continue
 
-    SELLS += new_incoming
+    elif monto > 0: 
+        suma_monto += monto
+        monto = int(input("ingrese el monto de venta, ingrese 0 para finalizar"))
+
+print(suma_monto)

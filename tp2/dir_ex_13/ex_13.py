@@ -5,14 +5,14 @@ el promedio de los valores positivos. Se deberá pedir el reingreso de un númer
 estuviera fuera del rango dado.
 '''
 
-POSITIVE_VALUES = 0
-POSITIVE_COUNTER = 0
-NEGATIVE_VALUES = 0
-ZERO_COUNTER = 0
+positive_values = 0
+positive_counter = 0
+negative_values = 0
+zero_counter = 0
 
-TOTAL_NUMBERS = 0
+total_numbers = 0
 
-while TOTAL_NUMBERS < 20:
+while total_numbers < 20:
 
     input_number = int(input('Ingresá 20 números enteros entre -10 y 10 (de a uno a la vez): '))
 
@@ -21,20 +21,19 @@ while TOTAL_NUMBERS < 20:
         continue
 
     if input_number == 0:
-        ZERO_COUNTER += 1
+        zero_counter += 1
 
     elif input_number < 1:
-        NEGATIVE_VALUES += input_number
+        negative_values += input_number
 
     else:
-        POSITIVE_COUNTER += 1
-        POSITIVE_VALUES += input_number
+        positive_counter += 1
+        positive_values += input_number
 
-
-    TOTAL_NUMBERS += 1
+    total_numbers += 1
 
 print(f'''
-La suma de los valores negativos es: {NEGATIVE_VALUES}.
-El promedio de los valores positivos es: {POSITIVE_VALUES / POSITIVE_COUNTER}.
-La cantidad de valores iguales a 0 es: {ZERO_COUNTER}.
+La suma de los valores negativos es: {negative_values}.
+El promedio de los valores positivos es: {positive_values / positive_counter}.
+La cantidad de valores iguales a 0 es: {zero_counter}.
 ''')
