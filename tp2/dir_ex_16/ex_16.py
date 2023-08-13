@@ -8,15 +8,12 @@ Ingresá números enteros mayores que 1 para tener un output de los números pri
 Ingresá 0 para salir del programa.
 ''')
 
+int_number = int(input('Ingresá un número mayor que 0: '))
+
 SHOULD_CONTINUE = True
 PRIME_NUMBERS = 0
 
-while SHOULD_CONTINUE:
-    int_number = int(input('Ingresá un número mayor que 0: '))
-
-    if int_number == 0:
-        print('Cerrando...')
-        break
+while int_number != 0:
 
     IS_PRIME = True
     for num in range(2, int_number):
@@ -25,6 +22,6 @@ while SHOULD_CONTINUE:
             break
 
     if IS_PRIME:
-        PRIME_NUMBERS += (int_number)
+        int_number = int(input('Ingresá un número mayor que 0: '))
 
 print(f'Esta es la cantidad de números primos que ingresaste: {PRIME_NUMBERS}')

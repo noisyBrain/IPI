@@ -10,7 +10,12 @@ a
 cantar
 '''
 
-str_input = input('Ingresá una frase: ').strip().split()
+str_input = input('Ingresá una frase: ') + ' '
+WORD = ' '
 
-for word in str_input:
-    print(word)
+while ' ' in str_input:
+    WORD = str_input[0:str_input.find(' ')]
+
+    print(WORD)
+
+    str_input = str_input[str_input.find(' ') + 1:]

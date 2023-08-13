@@ -6,17 +6,13 @@ Precondición: los primeros 4 caracteres serán siempre letras.
 
 str_input = input('Ingresá un texto: ')
 
-ALPHABET = 'ABCDEFGJIJKLMÑOPQRSTUVWQYZ'
 MAYUS_LETTERS = ''
 
-for index, input_char in enumerate(str_input):
-    accepted_range = 0 <= index <= 4
+for char in str_input[0:4]:
+    if char == char.upper():
+        MAYUS_LETTERS += char
 
-    if accepted_range and input_char in ALPHABET :
-        MAYUS_LETTERS += input_char
-
-
-if len(MAYUS_LETTERS) >=2:
+if len(MAYUS_LETTERS) >= 2:
     str_input = str_input.upper()
 
 print(str_input)

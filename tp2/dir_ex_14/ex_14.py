@@ -34,3 +34,6 @@ while SHOULD_CONTINUE:
 
     print(f'\nEl número 5 apareció {COUNT_FIVE} veces\n')
     COUNT_FIVE = 0
+
+
+
