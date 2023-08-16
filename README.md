@@ -24,6 +24,6 @@ At this stage, I'll explore Python's data structures for data organization and s
 - I will learn how to thoroughly test code.
 - I'm committed to optimizing the code I produce.
 
-❓**Do you have some advice or project idea to recomend me?**
+❓**Do you have some advice or project idea to recomend me?** Please, contact me by [Linkedin](https://linkedin.com/in/tomasarreguib)
 
 Feel free to follow along as I embark on this exciting learning journey!
