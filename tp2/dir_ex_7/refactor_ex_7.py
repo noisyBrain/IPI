@@ -6,43 +6,44 @@ hasta el doble del ingresado. Por ejemplo, si se ingresa un 8, se mostrará 8,
 10, 12, 14, 16. Si se ingresa un 5, se mostrarán 5, 6, 7, 8, 9, 10.
 '''
 
-
-def list_double_of_number(input_number: int) -> str:
-    result = check_if_is_even(input_number)
-
-    return result
+user_input = int(input("Ingresá un número distinto de 0: "))
 
 
-def check_if_is_even(input_number: int) -> str:
+def user_prompt(input_number: int):
+    if is_even(input_number):
+        return double_evens(input_number)
+    else:
+        return double_odds(input_number)
+
+
+def is_even(input_number: int) -> str:
     if input_number % 2 == 0:
-        return double_of_evens(input_number)
-
-    return correlative_odd_numbers(input_number)
+        return True
 
 
-def double_of_evens(number: int) -> list:
-    return store_correlative_even_numbers(number)
-
-
-def store_correlative_even_numbers(number: int) -> list:
+def double_of(number: int) -> tuple:
     double = number * 2
     numbers = []
 
-    for i in range(number, double + 1, 2):
+    return (double, numbers)
+
+
+def double_evens(even_number: int) -> list:
+    double, numbers = double_of(even_number)
+
+    for i in range(even_number, double + 1, 2):
         numbers.append(i)
 
     return numbers
 
 
-def correlative_odd_numbers(number: int) -> list:
-    return store_correlative_odd_numbers(number)
-
-
-def store_correlative_odd_numbers(odd_number: int) -> list:
-    double = odd_number * 2
-    numbers = []
+def double_odds(odd_number: int) -> list:
+    double, numbers = double_of(odd_number)
 
     for i in range(odd_number, double + 1):
         numbers.append(i)
 
     return numbers
+
+
+print(user_prompt(user_input))
