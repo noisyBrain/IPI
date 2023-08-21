@@ -6,10 +6,8 @@ hasta el doble del ingresado. Por ejemplo, si se ingresa un 8, se mostrará 8,
 10, 12, 14, 16. Si se ingresa un 5, se mostrarán 5, 6, 7, 8, 9, 10.
 '''
 
-user_input = int(input("Ingresá un número distinto de 0: "))
 
-
-def user_prompt(input_number: int):
+def user_output(input_number: int):
     if is_even(input_number):
         return double_evens(input_number)
     else:
@@ -44,6 +42,3 @@ def double_odds(odd_number: int) -> list:
         numbers.append(i)
 
     return numbers
-
-
-print(user_prompt(user_input))
