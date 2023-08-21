@@ -12,7 +12,7 @@ def test_store_relative_numbers_should_return_a_list_of_numbers():
     input_number = 10
     result = store_relative_numbers(input_number)
 
-    assert type(result) == list
+    assert isinstance(result, list)
 
 
 def test_store_relative_numbers_should_return_a_list_of_numbers_with_double_of_input():
