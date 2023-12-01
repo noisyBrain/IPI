@@ -1,24 +1,24 @@
 '''
-Calcular e imprimir la suma de los primeros 25 números de la sucesión de Fibonacci.
-La sucesión comienza con los números 0 y 1 y, a partir de estos, cada elemento es
-la suma de los dos números anteriores en la secuencia:
+Calcular e imprimir la suma de los primeros 25 números de la sucesión de
+Fibonacci. La sucesión comienza con los números 0 y 1 y, a partir de estos,
+cada elemento es la suma de los dos números anteriores en la secuencia:
 Ejemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55…
 '''
 
-PREVIOUS = 0
-TWO_PREVIOUS = 0
-CURRENT = 1
+previous = 0
+two_previous = 0
+current = 1
 
-print(PREVIOUS)
-print(CURRENT)
+print(previous)
+print(current)
 
 i = 0
 while i <= 25:
-    NEXT = CURRENT + PREVIOUS
-    print(NEXT)
+    next = current + previous
+    print(next)
 
-    TWO_PREVIOUS = PREVIOUS
-    PREVIOUS = CURRENT
-    CURRENT = NEXT
+    two_previous = previous
+    previous = current
+    current = next
 
     i += 1
