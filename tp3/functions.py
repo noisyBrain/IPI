@@ -1,6 +1,7 @@
 def is_even(number):
     return number % 2 == 0
 
+
 def sum_digits(number):
     aux = number
     sum_of_digits = 0
@@ -12,6 +13,7 @@ def sum_digits(number):
         aux = aux // 10
 
     return sum_of_digits
+
 
 def show_digits_sum(number):
     aux = number
@@ -25,13 +27,15 @@ def show_digits_sum(number):
 
     print(sum_of_digits)
 
+
 def max_number(number1, number2):
     if number1 > number2:
         return number1
 
     return number2
 
-def user(name):
+
+def parseUsername(name):
     username = ''
 
     for letter in name.lower():
@@ -41,6 +45,7 @@ def user(name):
             username += letter
 
     return username
+
 
 def default_password(dni):
     return dni % 10000
