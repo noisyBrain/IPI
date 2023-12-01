@@ -6,25 +6,23 @@ la leyenda 'Aprobados: ' y la cantidad de aprobados junto con la leyenda 'Desapr
 y la cantidad de desaprobados. Se deberá tener en cuenta que se aprueba con una nota mayor a 4.
 '''
 
-APPROVED = 0
-DISAPPROVED = 0
+approved = 0
+disapproved = 0
 
-CONDITION = True
+student = int(input('Ingrese el número de alumno: '))
 
-while CONDITION:
-    student = int(input('Ingrese el número de alumno: '))
+while student > 0:
     calification = int(input('Ingrese su calificación: '))
 
-    if student < 0:
-        CONDITION = False
-
     if calification >= 4:
-        APPROVED += 1
+        approved += 1
     else:
-        DISAPPROVED += 1
+        disapproved += 1
+
+    student = int(input('Ingrese el número de otro alumno: '))
 
 
 print(f'''
-cantidad de aprobados: {APPROVED};
-cantidad de desaprobados: {DISAPPROVED}
+cantidad de aprobados: {approved};
+cantidad de desaprobados: {disapproved}
 ''')
