@@ -27,3 +27,11 @@ def test_should_return_sum_of_inputs(mock_prompt_total_numbers_to_process, mock_
     number_to_process = sum_inputs()
 
     assert number_to_process == 12
+
+
+@patch('dir_ex_9.refactor_ex_9.total_numbers_to_process', side_effect=[3])
+@patch('dir_ex_9.refactor_ex_9.number_to_process', side_effect=[3, 4, -5])
+def test_should_return_sum_of_inputs(mock_prompt_total_numbers_to_process, mock_prompt_number_to_process):
+    number_to_process = sum_inputs()
+
+    assert number_to_process == 7

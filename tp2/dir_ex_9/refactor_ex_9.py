@@ -22,6 +22,9 @@ def sum_inputs():
 
     for i in range(total_inputs):
         number = number_to_process()
-        total_sum += number
+
+        if number > 0:
+            total_sum += number
+        else: continue
 
     return total_sum
