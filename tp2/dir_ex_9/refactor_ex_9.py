@@ -14,3 +14,14 @@ def total_numbers_to_process():
 def number_to_process():
     number_to_process = int(input('Ingresá el número a procesar: '))
     return number_to_process
+
+
+def sum_inputs():
+    total_inputs = total_numbers_to_process()
+    total_sum = 0
+
+    for i in range(total_inputs):
+        number = number_to_process()
+        total_sum += number
+
+    return total_sum
