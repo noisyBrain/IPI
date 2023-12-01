@@ -9,3 +9,8 @@ impares ingresados.
 def total_numbers_to_process():
     amount_of_numbers = int(input('Qué cantidad de números vas a querer ingresar? '))
     return amount_of_numbers
+
+
+def number_to_process():
+    number_to_process = int(input('Ingresá el número a procesar: '))
+    return number_to_process
