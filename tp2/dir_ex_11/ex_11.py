@@ -7,7 +7,7 @@ y la cantidad de desaprobados. Se deberá tener en cuenta que se aprueba con una
 '''
 
 print('''
-Bienvenidos a la base de datos de la unnoba!
+        Bienvenidos a la base de datos de la unnoba!
 
 Ingresá el número de alumno y luego su nota
 Ingresá 0 para ver el listado de aprobados y desaprobados
@@ -19,6 +19,10 @@ should_continue = True
 while should_continue:
     student_number = int(input('Ingresá el número del alumno: '))
 
+    if student_number < 0:
+        print('El número de alumno debe ser válido (1 en adelante)')
+        continue
+
     iterable = (i for i, obj in enumerate(students) if obj.get('student_number') == student_number)
     not_found = next(iterable, None)
 
@@ -28,6 +32,11 @@ while should_continue:
 
     if not_found is None:
         calification = int(input('Ingresá su calificación: '))
+
+        if calification < 0:
+            print('La calificación debe ser válida (entre 1 y 10)')
+            continue
+
         students.append({'student_number': student_number, 'calification': calification})
 
     else:
