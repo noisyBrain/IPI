@@ -13,17 +13,17 @@ Ingresá el número de alumno y luego su nota
 Ingresá 0 para ver el listado de aprobados y desaprobados
 ''')
 
-students = []
-SHOULD_CONTINUE = True
+students: list = []
+should_continue = True
 
-while SHOULD_CONTINUE:
+while should_continue:
     student_number = int(input('Ingresá el número del alumno: '))
 
     iterable = (i for i, obj in enumerate(students) if obj.get('student_number') == student_number)
     not_found = next(iterable, None)
 
     if student_number == 0:
-        SHOULD_CONTINUE = False
+        should_continue = False
         break
 
     if not_found is None:
