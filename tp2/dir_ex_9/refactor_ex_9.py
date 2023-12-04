@@ -20,7 +20,7 @@ def sum_inputs():
     total_inputs = total_numbers_to_process()
     total_sum = 0
 
-    for i in range(total_inputs):
+    for _ in range(total_inputs):
         number = number_to_process()
 
         if number > 0:
