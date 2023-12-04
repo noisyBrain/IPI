@@ -1,3 +1,18 @@
+'''
+Escribí un programa con el cual se procesarán las notas de un final de la materia.
+Para esto, se solicitará el ingreso del número de alumno y la nota recibida,
+hasta que se ingrese un número de alumno igual a cero, en cuyo caso se deberá imprimir en pantalla
+la leyenda 'Aprobados: ' y la cantidad de aprobados junto con la leyenda 'Desaprobados: '
+y la cantidad de desaprobados. Se deberá tener en cuenta que se aprueba con una nota mayor a 4.
+'''
+
+print('''
+        Bienvenidos a la base de datos de la unnoba!
+
+Ingresá el número de alumno y luego su nota
+Ingresá 0 para ver el listado de aprobados y desaprobados
+''')
+
 def is_valid_student(student_number: int) -> bool:
     return student_number > 0
 
