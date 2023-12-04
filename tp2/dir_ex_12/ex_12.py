@@ -5,10 +5,7 @@ Si se lee un monto negativo, se debe informar el problema sin interrumpir el ing
 La lectura de la información finaliza al leer un monto igual a cero
 '''
 
-should_continue = True
-sells = 0
-
-suma_monto = 0
+total_sum = 0
 monto = int(input("ingrese el monto de venta, ingrese 0 para finalizar: "))
 
 while monto != 0:
@@ -19,7 +16,7 @@ while monto != 0:
         continue
 
     else: 
-        suma_monto += monto
+        total_sum += monto
         monto = int(input("ingrese el monto de venta, ingrese 0 para finalizar: "))
 
-print(f"\nLa suma total de las ventas es de: {suma_monto}")
+print(f"\nLa suma total de las ventas es de: {total_sum}")
