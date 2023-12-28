@@ -6,11 +6,13 @@ from dir_ex_13.refactor_ex_12 import (
     sum_zeros
 )
 
-@patch('builtins.input', side_effect=['5'])
+@patch('builtins.input', side_effect=['7', '-4', '2', '10', '-9', '5', '0', '-3', '8', '-6', '1', '4', '-8', '3', '-7', '6', '-2', '9', '-5', '-10'])
 def test_should_take_user_input(mock_input):
     user_input = take_user_input()
 
-    assert user_input == 5
+    assert type(user_input) is list
+    assert len(user_input) == 20
+    assert user_input[0] == 7
 
 def test_should_return_false_when_number_is_invalid():
     assert is_valid_number(-12) == False

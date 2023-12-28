@@ -5,8 +5,13 @@ el promedio de los valores positivos. Se deberá pedir el reingreso de un númer
 estuviera fuera del rango dado.
 '''
 
-def take_user_input():
-    user_input = int(input('Ingresá un valor entre -10 y 10: '))
+def take_user_input() -> list:
+    max_input = 20
+    user_input = []
+
+    for _ in range(max_input):
+        number = int(input('Ingresá un valor entre -10 y 10: '))
+        user_input.append(number)
 
     return user_input
 
