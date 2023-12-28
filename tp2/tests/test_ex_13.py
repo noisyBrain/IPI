@@ -3,7 +3,8 @@ from unittest.mock import patch
 from dir_ex_13.refactor_ex_12 import (
     take_user_input,
     is_valid_number,
-    count_zeros
+    count_zeros,
+    sum_negatives
 )
 
 @patch('builtins.input', side_effect=['7', '-4', '2', '10', '-9', '5', '0', '-3', '8', '-6', '1', '4', '-8', '3', '-7', '6', '-2', '9', '-5', '-10'])
@@ -27,3 +28,9 @@ def test_should_return_total_of_zeros():
     total_zeros = count_zeros(user_inputs)
     
     assert total_zeros == 2
+
+def test_should_sum_negative_values():
+    user_inputs = [0, -4, 2, 10, -9, 5, 0, -3, 8, -6, 1, 4, -8, 3, -7, 6, -2, 9, -5, -10]
+    negative_sum = sum_negatives(user_inputs)
+
+    assert negative_sum == -54
