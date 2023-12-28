@@ -9,3 +9,6 @@ def take_user_input():
     user_input = int(input('Ingresá un valor entre -10 y 10: '))
 
     return user_input
+
+def is_valid_number(num: int) -> bool:
+    return num < 10 and num > -10
