@@ -18,7 +18,7 @@ def take_user_input() -> list:
 def is_valid_number(num: int) -> bool:
     return num < 10 and num > -10
 
-def sum_zeros(numbers: list) -> int:
+def count_zeros(numbers: list) -> int:
     total_zeros = 0
 
     for number in numbers:
