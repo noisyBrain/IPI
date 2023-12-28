@@ -28,10 +28,4 @@ def count_zeros(numbers: list) -> int:
     return total_zeros
 
 def sum_negatives(numbers: list) -> int:
-    total_sum = 0
-
-    for num in numbers:
-        if num < 0:
-            total_sum += num
-
-    return total_sum
+    return sum(number for number in numbers if number < 0)
