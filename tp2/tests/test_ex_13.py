@@ -4,7 +4,8 @@ from dir_ex_13.refactor_ex_12 import (
     take_user_input,
     is_valid_number,
     count_zeros,
-    sum_negatives
+    sum_negatives,
+    average_positives
 )
 
 @patch('builtins.input', side_effect=['7', '-4', '2', '10', '-9', '5', '0', '-3', '8', '-6', '1', '4', '-8', '3', '-7', '6', '-2', '9', '-5', '-10'])
@@ -34,3 +35,15 @@ def test_should_sum_negative_values():
     negative_sum = sum_negatives(user_inputs)
 
     assert negative_sum == -54
+
+def test_should_return_average_of_positive_numbers():
+    user_inputs = [0, -4, 2, 10, -9, 5, 0, -3, 8, -6, 1, 4, -8, 3, -7, 6, -2, 9, -5, -10]
+    average = average_positives(user_inputs)
+
+    assert average == 5.33
+
+def test_should_return_zero_when_no_positive_numbers():
+    user_inputs = [0, -4, -9, 0, -3, -6, -8, -7, -2, -5, -10]
+    average = average_positives(user_inputs)
+
+    assert average == 0

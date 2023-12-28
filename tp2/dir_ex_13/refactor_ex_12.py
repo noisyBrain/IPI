@@ -29,3 +29,11 @@ def count_zeros(numbers: list) -> int:
 
 def sum_negatives(numbers: list) -> int:
     return sum(number for number in numbers if number < 0)
+
+def average_positives(numbers: list) -> float:
+    positive_numbers = [x for x in numbers if x > 0]
+
+    if not positive_numbers:
+        return 0
+
+    return round(sum(positive_numbers) / len(positive_numbers), 2)
