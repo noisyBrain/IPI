@@ -6,34 +6,29 @@ Se deberán analizar los dígitos que componen a cada número ingresado informan
 La lectura de números finaliza al leer el valor -1
 '''
 
-SHOULD_CONTINUE = True
-COUNT_FIVE = 0
+count_five = 0
+input_number = int(input('Ingresá un número entero o -1 para cerrar: '))
 
-while SHOULD_CONTINUE:
-    int_number = int(input('Ingresá un número entero o -1 para cerrar: '))
-    aux_to_analize = int_number
+while input_number != -1:
 
-    if aux_to_analize == -1:
-        print('Cerrando...')
-        break
+    aux = input_number
 
-    while aux_to_analize > 0:
+    while aux > 0:
 
-        analize_number = aux_to_analize % 10
+        analize_number = aux % 10
 
         if analize_number % 2 == 0:
-            print(f'el dígito {analize_number} del número {int_number} es par')
+            print(f'el dígito {analize_number} del número {input_number} es par')
 
         else:
-            print(f'el dígito {analize_number} del número {int_number} es impar')
+            print(f'el dígito {analize_number} del número {input_number} es impar')
 
         if analize_number == 5:
-            COUNT_FIVE += 1
+            count_five += 1
 
-        aux_to_analize = aux_to_analize // 10
+        aux = aux // 10
 
-    print(f'\nEl número 5 apareció {COUNT_FIVE} veces\n')
-    COUNT_FIVE = 0
+    print(f'\nEl número 5 apareció {count_five} veces\n')
+    count_five = 0
 
-
-
+    input_number = int(input('Ingresá un número entero o -1 para cerrar: '))
